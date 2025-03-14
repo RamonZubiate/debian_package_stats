@@ -60,9 +60,9 @@ I brainstormed multiple ways to approach this problem, many of which involved mu
 
 However, I recognize the tradeoffs of not incorporating parallelism or asynchronous processing:
 
-### Multiprocessing could speed up file parsing by utilizing multiple CPU cores, especially for very large Contents-<arch>.gz files.
-### Asynchronous downloading could allow multiple architecture files to be fetched simultaneously, reducing network latency bottlenecks.
-### Batch processing could improve memory efficiency by reading large files in chunks instead of loading everything into memory at once.
+- Multiprocessing could speed up file parsing by utilizing multiple CPU cores, especially for very large Contents-<arch>.gz files.
+- Asynchronous downloading could allow multiple architecture files to be fetched simultaneously, reducing network latency bottlenecks.
+- Batch processing could improve memory efficiency by reading large files in chunks instead of loading everything into memory at once.
 
 Ultimately, I prioritized code readability, ease of debugging, and reliability over aggressive optimizations. Future iterations of this project could explore concurrent processing for further performance gains while maintaining the same core functionality very feasibly. I am certain these processing methods will not be difficult for me to implement.
 
