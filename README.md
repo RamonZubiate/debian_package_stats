@@ -28,9 +28,19 @@ pip install -r requirements.txt
 ```
 
 In order to run the tool, a user must:
+
 ```
 cd src
+```
+
+For Windows:
+```
 python package_statistics.py <architecture>
+```
+
+For Linux:
+```
+./package_statistics.py <architecture>
 ```
 
 The Contents file will be downloaded into `/downloads`, and the output of the package statistics will be in `/output`. Any appropriate Linux architecture will be downloaded.
@@ -75,24 +85,36 @@ This CLI tool includes logging to provide real-time feedback and assist with deb
 
 ## Caching
 
-Sometimes, downloading and redownloading files may This tool implements caching to avoid redundant downloads and improve performance.
+Downloading and redownloading files may prove to be inefficient. This tool implements caching to avoid redundant downloads and improve performance.
 
-When the script runs, it checks the `src/downloads/` directory for a previously downloaded Contents-<architecture>.gz file.
+When the script runs, it checks the `src/downloads/` directory for a previously downloaded Contents-arch.gz file.
 - If a cached file exists, it is used instead of downloading a new one.
 - If --force-download flag is used, the cache is bypassed, and a fresh download is performed.
 
-To bypass the cache and fetch a new Contents file (or if you want an updated file):
+To bypass the cache and fetch a new Contents file (if you want an updated file):
 
-``` 
-py package_statistics.py <architecture> --force-download
+For Windows:
+```
+python package_statistics.py <architecture> --force-download
+```
+
+For Linux:
+```
+./package_statistics.py <architecture> --force-download
 ```
 
 ## Substituting a Mirror
 
 If you have a mirror that you would rather use than the mirror provided by default:
 
+For Windows:
 ```
-py package_statistics.py <architecture> --mirror-url <mirror_url>
+python package_statistics.py <architecture> --mirror-url <mirror_url>
+```
+
+For Linux:
+```
+./package_statistics.py <architecture> --mirror-url <mirror_url>
 ```
 
 The default mirror being used is: http://ftp.uk.debian.org/debian/dists/stable/main/
