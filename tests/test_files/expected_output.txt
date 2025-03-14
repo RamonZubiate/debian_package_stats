@@ -1,0 +1,12 @@
+Top 10 packages for test by file count:
+
+1.	science/fftw         	5 files
+2.	utils/coreutils      	4 files
+3.	science/esys-particle	4 files
+4.	admin/coreutils      	2 files
+5.	devel/gcc-11         	2 files
+6.	devel/gcc-12         	2 files
+7.	net/openssh-client   	2 files
+8.	science/python3-numpy	2 files
+9.	admin/bash           	1 files
+10.	python/python3       	1 files
